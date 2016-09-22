@@ -1,0 +1,19 @@
+<h1 class="text-center">新闻列表</h1>
+<table class="table-hover table" style="width: 100%">
+    <tbody>
+        <tr class="row" ng-repeat="news in list" style="font-size: 20px;">
+            <td class="col-sm-3">
+                <small ng-bind="formatTime(news.createTime)"></small>
+            </td>
+            <td class="col-sm-9">
+                <span>{{news.title}}</span>
+                <span style="float: right;">
+                    [<a href="javascript:void(0)" ng-click="NewsDetail(news._id)">查看</a>]
+                    [<a href="javascript:void(0)" ng-click="NewsUpdate(news._id)">修改</a>]
+                    [<a href="javascript:void(0)" ng-click="NewsDelete(news._id)">删除</a>]
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" ng-click="createNews()" style="margin-top: 10px;">新增新闻</button>

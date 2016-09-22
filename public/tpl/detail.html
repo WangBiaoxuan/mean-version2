@@ -1,0 +1,15 @@
+<div class="table">
+    <thead>
+        <tr>
+            <h1 ng-bind="current.title"></h1>
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+             <span ng-bind="formatTime(current.createTime)"></span>
+        </tr>
+        <tr>
+            <div ng-bind="current.content" style="line-height: 1.5; margin-top: 10px;"></div>
+        </tr>
+    </tbody>
+</div>
